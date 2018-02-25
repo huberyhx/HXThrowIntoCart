@@ -1,6 +1,6 @@
-###效果图:
+效果图:
 ![抛物.gif](http://upload-images.jianshu.io/upload_images/2954364-a72f17897117ae86.gif?imageMogr2/auto-orient/strip)
-###类用法:
+类用法:
 1:HXThrowView拖入项目中
 2:创建View
 3:调用该方法 告诉view抛向哪里
@@ -10,14 +10,14 @@
 为了方便显示图片,类继承自ImageView
 用的时候可以修改为继承Button或者其他
 
-###类实现:
+类实现:
 动画非常简单
 使用了核心动画中的
 CABasicAnimation
 CAKeyframeAnimation
 然后用组动画CAAnimationGroup包装一下
 
-####CABasicAnimation:
+CABasicAnimation:
 用BasicAnimation来做旋转
 由于旋转的时候不需要设置其属性
 所以直接写成了懒加载:
@@ -57,7 +57,7 @@ CAKeyframeAnimation
 
 ```
 
-####路径生成:
+路径生成:
 根据拿到的要抛向的点
 和自己的center来生成抛物路径
 用两点所在直线的交叉点来做贝塞尔曲线的控制点
@@ -81,7 +81,7 @@ CAKeyframeAnimation
     CGFloat duration = self.timeRatio? space/BaseSpace * BaseTime * self.timeRatio : space/BaseSpace * BaseTime;
 ```
 
-####CAKeyframeAnimation:
+CAKeyframeAnimation:
 ```
     //抛物动画
     CAKeyframeAnimation *positionAnim = [CAKeyframeAnimation animation];
@@ -95,7 +95,7 @@ CAKeyframeAnimation
     positionAnim.repeatCount = 1;
 ```
 
-####CAAnimationGroup:
+CAAnimationGroup:
 组动画把抛物动画和旋转动画包装起来
 ```
     CAAnimationGroup *groupAnim = [CAAnimationGroup animation];
