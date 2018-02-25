@@ -1,5 +1,7 @@
 效果图:
 ![抛物.gif](http://upload-images.jianshu.io/upload_images/2954364-a72f17897117ae86.gif?imageMogr2/auto-orient/strip)
+
+
 类用法:
 1:HXThrowView拖入项目中
 2:创建View
